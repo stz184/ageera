@@ -1,0 +1,24 @@
+meta {
+  name: Push new live data
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/api/live_data
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "site": 3, 
+      dt_stamp TIMESTAMP NOT NULL,
+      soc INT CHECK (soc >= 0 AND soc <= 100) NOT NULL,
+      load_kwh FLOAT CHECK (load_kwh >= 0) NOT NULL,
+      net_load_kwh FLOAT CHECK (net_load_kwh >= 0) NOT NULL,
+      pv_notification BOOLEAN NOT NULL,
+      bio_notification BOOLEAN NOT NULL,
+      cro_notification BOOLEAN NOT NULL
+  }
+}

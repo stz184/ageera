@@ -1,0 +1,25 @@
+meta {
+  name: Push new configuration
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/api/configurations
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "site": 1,
+    "battery_vendor": "KATL",
+    "battery_capacity_kwh": 100,
+    "battery_max_power_kw": 110,
+    "production_pv_units": 15,
+    "production_pv_kwp": 20,
+    "production_bio_units": 1,
+    "production_cro_units": 2,
+    "production_cro_kwp": 3
+  }
+}

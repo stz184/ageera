@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Ageera",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
